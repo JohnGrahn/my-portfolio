@@ -4,9 +4,8 @@ import { Icon } from "@iconify/react";
 const Home = () => {
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col md:flex-row mx-4 my-8 items-center">
+      <div className="flex flex-col md:flex-row mx-4 my-8 items-center text-center">
         <div className="md:w-1/2 mb-8 md:mb-0 md:mr-8">
-          <div className="text-center max-w-md">
             <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
             <p className="py-6">
               Hi, I'm a software developer with a passion for creating
@@ -21,7 +20,6 @@ const Home = () => {
               questions or would like to discuss potential collaborations, feel
               free to get in touch.
             </p>
-          </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
           <img

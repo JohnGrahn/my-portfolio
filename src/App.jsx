@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import Blog from './pages/Blog';
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
