@@ -21,13 +21,13 @@ const Blog = () => {
   return (
     <div className="container mx-auto">
       {selectedPost ? (
-        <div>
-        <button className="btn btn-primary mb-4" onClick={handleBackClick}>
-          Back to Blog Posts
-        </button>
-        <h2>{selectedPost.title}</h2>
-        <BlogPost markdownFile={selectedPost.file} />
-        </div>      
+        <div className="flex flex-col items-center">
+          <button className="btn btn-primary mb-4" onClick={handleBackClick}>
+            Back to Blog Posts
+          </button>
+          <h2 className="text-center">{selectedPost.title}</h2>
+          <BlogPost markdownFile={selectedPost.file} />
+        </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {posts.map((post, index) => (

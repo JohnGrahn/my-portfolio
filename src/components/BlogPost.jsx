@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import remarkGfm from "remark-gfm";
+import remarkSlug from "remark-slug";
+import remarkToc from "remark-toc";
 
 const CodeBlock = ({ className, children }) => {
   const language = className?.replace("language-", "");
   return (
-    <SyntaxHighlighter language={language} style={atomDark}>
-      {children}
-    </SyntaxHighlighter>
+    <div className="not-prose">
+      <SyntaxHighlighter language={language} style={atomDark}>
+        {children}
+      </SyntaxHighlighter>
+    </div>
   );
 };
 
@@ -27,13 +32,18 @@ const BlogPost = ({ markdownFile }) => {
   }, [markdownFile]);
 
   return (
-    <ReactMarkdown
-      components={{
-        code: CodeBlock,
-      }}
-    >
-      {content}
-    </ReactMarkdown>
+    <div className="flex justify-center">
+      <div className="prose max-w-none">
+        <ReactMarkdown
+          remarkPlugins={[remarkSlug, remarkToc, remarkGfm]}
+          components={{
+            code: CodeBlock,
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </div>
+    </div>
   );
 };
 
