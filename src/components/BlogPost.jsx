@@ -17,7 +17,7 @@ const CodeBlock = ({ className, children }) => {
   );
 };
 
-const BlogPost = ({ markdownFile }) => {
+const BlogPost = ({ markdownFile, image }) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
@@ -34,6 +34,17 @@ const BlogPost = ({ markdownFile }) => {
   return (
     <div className="flex justify-center">
       <div className="prose max-w-none">
+        {image && (
+          <div className="flex justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 300 300"
+              className="w-48 h-48 mb-4"
+            >
+              <image href={image} width="100%" height="100%" />
+            </svg>
+          </div>
+        )}
         <ReactMarkdown
           remarkPlugins={[remarkSlug, remarkToc, remarkGfm]}
           components={{

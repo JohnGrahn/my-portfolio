@@ -1,48 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const Resume = () => {
+  const [showPdf, setShowPdf] = useState(false);
+  const [markdownContent, setMarkdownContent] = useState("");
+
+  useEffect(() => {
+    fetch("/Resume.md")
+      .then((response) => response.text())
+      .then((text) => {
+        setMarkdownContent(text);
+      })
+      .catch((error) => {
+        console.error("Error fetching markdown file:", error);
+      });
+  }, []);
+
+  const toggleResume = () => {
+    setShowPdf(!showPdf);
+  };
+
   return (
-    <div>
-      <h2>Resume</h2>
-      <h3>Work Experience</h3>
-      <div style={{ marginBottom: "16px" }}>
-        <h4>Software Engineer, ABC Company</h4>
-        <h5>January 2020 - Present</h5>
-        <ul>
-          <li>
-            Developed and maintained web applications using React and Node.js
-          </li>
-          <li>
-            Collaborated with cross-functional teams to deliver high-quality
-            software
-          </li>
-          <li>Implemented responsive and accessible user interfaces</li>
-        </ul>
+    <div className="container mx-auto">
+      <div className="my-8">
+        <div className="form-control mb-4">
+          <label className="label cursor-pointer">
+            <span className="label-text">Show PDF</span>
+            <input
+              type="checkbox"
+              className="toggle"
+              checked={showPdf}
+              onChange={toggleResume}
+            />
+          </label>
+        </div>
+        {showPdf ? (
+          <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">
+            <iframe
+              src="/JohnGrahnResume.pdf"
+              width="100%"
+              height="600px"
+              title="Resume PDF"
+              className="border border-gray-300 rounded"
+            ></iframe>
+          </div>
+        ) : (
+          <div className="prose max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {markdownContent}
+            </ReactMarkdown>
+          </div>
+        )}
       </div>
-      <div style={{ marginBottom: "16px" }}>
-        <h4>Web Developer, XYZ Agency</h4>
-        <h5>June 2018 - December 2019</h5>
-        <ul>
-          <li>
-            Built and maintained client websites using HTML, CSS, and JavaScript
-          </li>
-          <li>Optimized website performance and improved user experience</li>
-          <li>Worked closely with designers to implement responsive layouts</li>
-        </ul>
-      </div>
-      <h3>Education</h3>
-      <div style={{ marginBottom: "16px" }}>
-        <h4>Bachelor of Science in Computer Science</h4>
-        <h5>University of Example, 2014 - 2018</h5>
-      </div>
-      <h3>Skills</h3>
-      <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
     </div>
   );
 };
