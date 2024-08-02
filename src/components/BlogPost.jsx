@@ -7,15 +7,30 @@ import remarkSlug from "remark-slug";
 import remarkToc from "remark-toc";
 
 const CodeBlock = ({ className, children }) => {
-  const language = className?.replace("language-", "");
+  const language = className?.replace("language-", "") || "text";
   return (
-    <div className="not-prose">
-      <SyntaxHighlighter language={language} style={atomDark}>
+    <div className="not-prose inline-block">
+      <SyntaxHighlighter
+        language={language}
+        style={atomDark}
+        customStyle={{
+          padding: "1em",
+          borderRadius: "0.5em",
+          display: "inline-block",
+          minWidth: "100%",
+        }}
+        wrapLines={true}
+        wrapLongLines={true}
+        PreTag={({ children, ...props }) => (
+          <pre className="not-prose" {...props}>{children}</pre>
+        )}
+      >
         {children}
       </SyntaxHighlighter>
     </div>
   );
 };
+
 
 const BlogPost = ({ markdownFile, image }) => {
   const [content, setContent] = useState("");
@@ -50,6 +65,7 @@ const BlogPost = ({ markdownFile, image }) => {
           components={{
             code: CodeBlock,
           }}
+          className="max-w-none"
         >
           {content}
         </ReactMarkdown>
