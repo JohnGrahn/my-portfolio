@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -29,8 +30,9 @@ function App() {
 
   return (
     <Router>
-      <div data-theme={theme}>
+      <div data-theme={theme} className="flex flex-col min-h-screen">
         <Header />
+        <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
@@ -38,6 +40,8 @@ function App() {
           <Route path="/blog" element={<Blog/>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
