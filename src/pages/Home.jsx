@@ -45,9 +45,7 @@ const Home = () => {
             <li>RESTful API development and integration</li>
             <li>Performance optimization and scalability considerations</li>
           </ul>
-          <a href="#" className="btn btn-primary">
-            Learn More
-          </a>
+          
         </div>
         <div className="md:w-1/2 flex justify-center">
           <img
@@ -88,9 +86,7 @@ const Home = () => {
             <li>Automating infrastructure provisioning and configuration management using Terraform and Azure DevOps</li>
             <li>Implementing CI/CD pipelines using Azure DevOps and Azure Pipelines</li>
           </ul>
-          <a href="#" className="btn btn-primary">
-            Learn More
-          </a>
+          
         </div>
         <div className="md:w-1/2 flex justify-center">
           <img
