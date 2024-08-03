@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -31,24 +32,32 @@ const CodeBlock = ({ className, children }) => {
   );
 };
 
-
-const BlogPost = ({ markdownFile, image }) => {
+const BlogPost = () => {
+  const { postId } = useParams();
   const [content, setContent] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
-    fetch(`/${markdownFile}`)
+    fetch(`/posts/${postId}.md`)
       .then((response) => response.text())
       .then((text) => {
         setContent(text);
+        const imageMatch = text.match(/image:\s*(.+)/);
+        if (imageMatch) {
+          setImage(imageMatch[1]);
+        }
       })
       .catch((error) => {
         console.error("Error fetching markdown file:", error);
       });
-  }, [markdownFile]);
+  }, [postId]);
 
   return (
-    <div className="flex justify-center">
-      <div className="prose max-w-none">
+    <div className="flex flex-col items-center w-full px-4 sm:px-6 lg:px-8">
+      <Link to="/blog" className="btn btn-primary mb-4">
+        Back to Blog Posts
+      </Link>
+      <div className="w-full max-w-3xl">
         {image && (
           <div className="flex justify-center">
             <svg
@@ -65,7 +74,7 @@ const BlogPost = ({ markdownFile, image }) => {
           components={{
             code: CodeBlock,
           }}
-          className="max-w-none"
+          className="prose max-w-none"
         >
           {content}
         </ReactMarkdown>
