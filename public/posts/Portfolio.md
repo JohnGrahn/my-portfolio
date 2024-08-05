@@ -60,7 +60,7 @@ const BlogPost = () => {
 export default BlogPost; 
 ```
 
-This code demonstrates how React's `useEffect` hook is used to fetch the Markdown content for the requested blog post based on the `postId` from the URL. It then utilizes the `ReactMarkdown` component to render the Markdown into HTML, enhancing it with plugins like `remarkSlug`, `remarkToc`, and `remarkGfm` for a better user experience.
+This code demonstrates how React's useEffect hook is used to fetch the Markdown content for the requested blog post based on the postId from the URL. It then utilizes the ReactMarkdown component to render the Markdown into HTML, enhancing it with plugins like remarkSlug, remarkToc, and remarkGfm for a better user experience.
 
 
 ### 2. Responsive Design
