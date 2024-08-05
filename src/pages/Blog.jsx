@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   const posts = [
-    { title: "Post 1", file: "posts/post1.md", image: "images/post1.jpg" },
+    { title: "Building My Portfolio Site", file: "Portfolio/post1.md", image: "images/post1.jpg" },
     { title: "AZ-305 Azure Solutions Architect Expert", file: "posts/AZ-305.md", image: "images/microsoft-certified-expert-badge.svg" },
     { title: "AZ-104 Associate Azure Administrator Exam", file: "posts/AZ-104.md", image: "images/microsoft-certified-associate-badge.svg" },
     // Add more posts as needed
