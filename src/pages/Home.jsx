@@ -15,11 +15,14 @@ const Home = () => {
           </p>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <img
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-            alt="Coding on laptop"
-            className="max-w-lg rounded-lg shadow-2xl"
-          />
+        <div className="w-full h-64 md:h-80 lg:h-96 max-w-xl mx-auto overflow-hidden rounded-lg shadow-2xl">
+
+    <img
+      src="/images/terminal.avif"
+      alt="Coding on laptop"
+      className="w-full h-full object-cover"
+    />
+  </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row mx-4 my-8 items-center">
@@ -48,11 +51,16 @@ const Home = () => {
           
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <img
-            src="https://via.placeholder.com/500x300"
+        <div className="w-full h-64 md:h-80 lg:h-96 max-w-xl mx-auto overflow-hidden rounded-lg shadow-2xl">
+
+
+         <img
+            src="/images/fullstack.jpg"            
             alt="Full Stack Development"
-            className="rounded-lg shadow-lg"
+            className="w-full h-full object-cover"
+           
           />
+        </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row mx-4 my-8 items-center">
@@ -89,11 +97,15 @@ const Home = () => {
           
         </div>
         <div className="md:w-1/2 flex justify-center">
+        <div className="w-full h-64 md:h-80 lg:h-96 max-w-xl mx-auto overflow-hidden rounded-lg shadow-2xl">
+
+
           <img
-            src="https://via.placeholder.com/500x300"
+            src="/images/cloud.jpg"
             alt="Cloud Infrastructure & Architecture"
-            className="rounded-lg shadow-lg"
+            className="w-full h-full object-cover"
           />
+        </div>
         </div>
       </div>
     </div>
