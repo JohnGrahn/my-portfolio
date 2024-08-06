@@ -1,7 +1,7 @@
 John Grahn  
 johngrahn@protonmail.com | [github.com/johngrahn](https://github.com/johngrahn) | [johngrahn.com](https://johngrahn.com)  
 **EDUCATION**  
-**Western Governor's University**	**Salt Lake City, Utah**  
+**Western Governors University**	**Salt Lake City, Utah**  
 *Bachelor of Science in Computer Science*	Graduated Spring 2023
 
 * **Relevant Coursework**: Calculus, Discrete Mathematics, Data Structures and Algorithms, Computer Architecture, Operating Systems, Machine Learning
