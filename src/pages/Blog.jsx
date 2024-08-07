@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   const posts = [
-    { title: "Building My Portfolio Site", file: "posts/Portfolio.md", image: "images/post1.jpg" },
+    { title: "Building My Portfolio Site", file: "posts/Portfolio.md", image: "images/projects/portfolio.png" },
     { title: "AZ-305 Azure Solutions Architect Expert", file: "posts/AZ-305.md", image: "images/microsoft-certified-expert-badge.svg" },
     { title: "AZ-104 Associate Azure Administrator Exam", file: "posts/AZ-104.md", image: "images/microsoft-certified-associate-badge.svg" },
     // Add more posts as needed
@@ -19,13 +19,21 @@ const Blog = () => {
             className="card bg-base-100 shadow-xl cursor-pointer"
           >
             <figure className="relative pt-[56.25%]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 300 300"
-                className="absolute top-0 left-0 w-full h-full"
-              >
-                <image href={post.image} width="100%" height="100%" />
-              </svg>
+              {post.image.endsWith('.svg') ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 300 300"
+                  className="absolute top-0 left-0 w-full h-full"
+                >
+                  <image href={post.image} width="100%" height="100%" />
+                </svg>
+              ) : (
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+              )}
             </figure>
             <div className="card-body">
               <h2 className="card-title">{post.title}</h2>
