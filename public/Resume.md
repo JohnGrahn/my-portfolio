@@ -7,15 +7,15 @@ johngrahn@protonmail.com | [github.com/johngrahn](https://github.com/johngrahn) 
 * **Relevant Coursework**: Calculus, Discrete Mathematics, Data Structures and Algorithms, Computer Architecture, Operating Systems, Machine Learning
 
 **WORK EXPERIENCE**  
-**DataAnnotation.Tech,**     **Remote**  
+**DataAnnotation.Tech,**	**Remote**  
 *Software Developer – AI Trainer*	October 2023 – Present
 
-* Utilize reinforcement learning from human feedback to help machine learning models learn efficiently   
-* Write and evaluate Python and JavaScript code, and correct AI-generated code   
-* Create prompts according to varying tasking and parameters  
+* Implement reinforcement learning from human feedback (RLHF) techniques to optimize machine learning model efficiency and performance  
+* Develop and evaluate Python and JavaScript code, including reviewing and correcting AI-generated code for accuracy and functionality  
+* Design tailored prompts for diverse AI tasks, adapting parameters to meet specific project requirements  
 * Ensure AI models adhere to legal and ethical obligations 
 
-**Contractor,**     **Connecticut**  
+**Contractor,**     **Connecticut**
 August 2017 – October 2023
 
 * Mow, water, weed, and fertilize lawns
@@ -27,11 +27,11 @@ August 2017 – October 2023
 **The Hartford Financial Services Group, Inc.,**	**Hartford, Connecticut**  
 *Information Technology Intern*	June 2014—August 2014   June 2015—December 2016
 
-* Provided Audio, Video, and Livestreaming support for company meetings   
-* Provided remote end user iPad and iPhone support with Microsoft Intune  
-* Created web-based app with JavaScript and SharePoint to recertify users in accordance with the company’s mobile device policy    
-* Maintained inventory of equipment ranging from projectors to TVs, and replaced broken conference room equipment  
-* Wrote and deployed documentation how on to use the various technology in conference rooms across the company 
+* Engineered and deployed a web-based application using JavaScript and SharePoint for user recertification, ensuring compliance with company mobile device policies   
+* Provided technical support for company-wide meetings, including audio, video, and livestreaming services  
+* Provided remote end user iOS support with Microsoft Intune  
+* Managed inventory and maintenance of audiovisual equipment across multiple conference rooms, ensuring optimal functionality and minimal downtime  
+* Developed and distributed company-wide documentation on conference room technology usage, improving user adoption and reducing support requests
 
 **PROJECTS**  
 **Personal Portfolio** ([johngrahn.com](https://johngrahn.com/)) | React, Tailwind CSS, Docker, Oracle Cloud
