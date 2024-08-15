@@ -21,7 +21,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
             <a
-              href="https://www.linkedin.com/in/your-linkedin-profile"
+              href="https://www.linkedin.com/in/john-grahn-852553168"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -30,14 +30,14 @@ const Contact = () => {
               LinkedIn
             </a>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:johngrahn@protonmail.com"
               className="btn btn-primary"
             >
               <Icon icon="mdi:email" className="mr-2" />
               Email
             </a>
             <a
-              href="https://github.com/your-github-username"
+              href="https://github.com/johngrahn"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
